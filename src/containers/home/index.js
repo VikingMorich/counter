@@ -1,8 +1,8 @@
 import React from 'react'
 import { push } from 'connected-react-router'
 import { bindActionCreators } from 'redux'
-import logo from '../../logo.svg';
 import { connect } from 'react-redux'
+import Counter from '../counter';
 import {
   increment,
   decrement
@@ -11,17 +11,7 @@ import {
 const Home = props => (
   <div>
     <h1>🎲 Game counter 🎲</h1>
-    <div className="counter__container">
-      <div className="counter__button">
-        <p className="counter__button--value" onClick={props.decrement}>-</p>
-      </div>
-      <div className="counter__screen">
-        <p className="counter__value">{props.count}</p>
-      </div>
-      <div className="counter__button">
-        <p className="counter__button--value" onClick={props.increment}>+</p>
-      </div>
-    </div>
+    <Counter />
   </div>
 )
 
