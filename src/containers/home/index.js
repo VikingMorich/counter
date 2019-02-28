@@ -11,14 +11,22 @@ import {
 const Home = props => (
   <div>
     <h1>🎲 Game counter 🎲</h1>
-    <Counter />
+    <div className="button__container">
+      <div className="button">
+        <p>Add Counter</p>
+      </div>
+      <div className="button">
+        <p>Remove Counter</p>
+      </div>
+    </div>
+    <hr></hr>
+    {props.playerIds.map(id => <Counter id={id}/>)}
   </div>
 )
 
 const mapStateToProps = ({ counter }) => ({
-  count: counter.count,
-  isIncrementing: counter.isIncrementing,
-  isDecrementing: counter.isDecrementing
+  players: counter.players,
+  playerIds: counter.playerIds
 })
 
 const mapDispatchToProps = dispatch =>

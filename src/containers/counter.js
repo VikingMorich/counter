@@ -10,7 +10,6 @@ const mapStateToProps = ({ counter }) => ({
     count: counter.count,
     isIncrementing: counter.isIncrementing,
     isDecrementing: counter.isDecrementing,
-    players: 1
 })
 
 const mapDispatchToProps = dispatch =>

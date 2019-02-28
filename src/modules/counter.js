@@ -6,7 +6,8 @@ export const DECREMENT = 'counter/DECREMENT'
 const initialState = {
   count: 0,
   isIncrementing: false,
-  isDecrementing: false
+  isDecrementing: false,
+  playerIds: ['1', '2']
 }
 
 export default (state = initialState, action) => {

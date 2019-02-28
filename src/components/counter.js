@@ -2,10 +2,10 @@ import React from 'react';
 
 export class Counter extends React.Component {
     render () {
-        const { decrement, count, increment, players} = this.props;
+        const { decrement, count, increment} = this.props;
         return (
             <div>
-                <h3>Player{players}</h3>
+                <h3>Player{this.props.id}</h3>
                 <div className="counter__container">
                     <div className="counter__button">
                         <p className="counter__button--value" onClick={decrement}>-</p>
