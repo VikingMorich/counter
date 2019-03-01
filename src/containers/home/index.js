@@ -20,13 +20,14 @@ const Home = props => (
       </div>
     </div>
     <hr></hr>
-    {props.playerIds.map(id => <Counter id={id}/>)}
+    {props.playerIds.map(id => <Counter id={id} key={id} count={props.startingCount}/>)}
   </div>
 )
 
 const mapStateToProps = ({ counter }) => ({
   players: counter.players,
-  playerIds: counter.playerIds
+  playerIds: counter.playerIds,
+  startingCount: counter.count
 })
 
 const mapDispatchToProps = dispatch =>

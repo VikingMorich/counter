@@ -7,7 +7,6 @@ import {
 } from '../modules/counter'
 
 const mapStateToProps = ({ counter }) => ({
-    count: counter.count,
     isIncrementing: counter.isIncrementing,
     isDecrementing: counter.isDecrementing,
 })
