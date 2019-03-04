@@ -1,4 +1,7 @@
 {
+  "name": "Counter",
+  "description": "React game counter",
+  "author": "Enric Moriche <enricmoriche91@hotmail.com> Ivan Cordova <morpamz@hotmail.com>",
   "private": true,
   "homepage": "https://create-react-app-redux.now.sh",
   "scripts": {
@@ -10,20 +13,19 @@
     "eject": "react-scripts eject",
     "precommit": "pretty-quick --staged"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "connected-react-router": "4.5.0",
+    "prettier": "1.16.4",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-redux": "5.1.1",
     "react-router": "4.3.1",
     "react-router-dom": "4.3.1",
+    "react-scripts": "2.1.4",
     "redux": "4.0.1",
     "redux-thunk": "2.3.0",
     "sanitize.css": "7.0.3",
-    "prettier": "1.16.4",
-    "react-scripts": "2.1.4",
     "serve": "10.1.2"
   },
   "browserslist": [
