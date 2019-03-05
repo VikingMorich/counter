@@ -9,6 +9,17 @@
   margin: auto;
 }
 
+.counter__container--dead {
+  margin-top: 3em;
+  background-color: grey;
+  height: 4em;
+  width: 15em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
 .counter__screen {
   height: 3em;
   width: 8em;
@@ -23,6 +34,7 @@
   margin-block-start: 0.2em;
   margin-block-end: 0.2em;
   font-size: 1.7em;
+  margin-top: 0.3em;
 }
 
 .counter__button{
@@ -33,6 +45,17 @@
   margin-left: 0.5em;
   border-radius: 50%;
   margin-top: 0.75em;
+}
+
+.counter__button--dead{
+  width: 2.5em;
+  height: 2.5em;
+  background-color: #494949;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  border-radius: 50%;
+  margin-top: 0.75em;
+  color: lightgray
 }
 
 .counter__button--value {

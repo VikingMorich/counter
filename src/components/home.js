@@ -1,5 +1,5 @@
 import React from 'react'
-import Counter from './counter';
+import Counter from '../containers/counter';
 
 
 export class Home extends React.Component {
@@ -30,6 +30,12 @@ export class Home extends React.Component {
     });
   }
 
+  resetCounters = () => {
+    const oldPlayerIds = this.props.playerIds
+    this.props.removeCounter([])
+    setTimeout(() => {this.props.addCounter(oldPlayerIds)}, 1);
+  }
+
   render () {
     return (
       <div>
@@ -40,6 +46,9 @@ export class Home extends React.Component {
           </div>
           <div className="button" onClick={this.removeCounter}>
             <p>Remove Counter</p>
+          </div>
+          <div className="button" onClick={this.resetCounters}>
+            <p>Reset Counters</p>
           </div>
         </div>
         <hr></hr>
