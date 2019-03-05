@@ -3,13 +3,15 @@ import {
   REMOVE_COUNTER,
   CHANGE_INITIAL_VALUE,
   ENABLE_DEAD_MODE,
-  DISABLE_DEAD_MODE
+  DISABLE_DEAD_MODE,
+  TOGGLE_MODAL
 } from '../actions/types/counter'
 
 export const initialState = {
   count: 0,
-  playerIds: [1],
-  deadMode: false 
+  playerIds: ['Player1'],
+  deadMode: false,
+  modalActive: false
 }
 
 export default (state = initialState, action) => {
@@ -38,6 +40,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         deadMode: false
+      }
+    case TOGGLE_MODAL:
+      return {
+        ...state,
+        modalActive: !state.modalActive
       }
     default:
       return state;

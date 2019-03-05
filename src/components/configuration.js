@@ -24,12 +24,19 @@ export class Configuration extends React.Component {
     render() {
         return (
             <div>
-                <label>Starting value of Counter</label>
-                <input type="number" id="startingValue" placeholder={this.props.startingCount}/>
-                <label>Dead Mode</label>
-                <input type="checkbox" id="deadMode"/>
-                <br></br><br></br>
-                <button onClick={this.sendForm}>Send</button>
+                <h1>Configuration</h1>
+                <div>
+                    <div className="configForm">
+                        <label>Starting value</label>
+                        <input className="configFormInput" type="number" id="startingValue" placeholder={this.props.startingCount}/>
+                    </div>
+                    <div className="configForm">
+                        <label>Dead Mode</label>
+                        <input type="checkbox" id="deadMode" defaultChecked={this.props.deadMode}/>
+                    </div>
+                    <br></br>
+                    <button onClick={this.sendForm}>Send</button>
+                </div>
             </div>
         )
     };

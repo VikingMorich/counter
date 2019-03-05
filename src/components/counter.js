@@ -44,7 +44,7 @@ export class Counter extends React.Component {
             <div>
                 {(this.props.deadMode && this.state.count === 0) ? (
                     <React.Fragment>
-                        <h3>Player{this.props.id}</h3>
+                        <h3>{this.props.id}</h3>
                         <div className="counter__container--dead">
                             <div className="counter__button--dead">
                                 <p className="counter__button--value" onClick={this.decrement}>-</p>
@@ -59,7 +59,7 @@ export class Counter extends React.Component {
                     </React.Fragment>
                 ) : (
                     <React.Fragment>
-                        <h3>Player{this.props.id}</h3>
+                        <h3>{this.props.id}</h3>
                         <div className="counter__container">
                             <div className="counter__button">
                                 <p className="counter__button--value" onClick={this.decrement}>-</p>

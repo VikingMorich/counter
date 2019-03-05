@@ -2,3 +2,5 @@
 
 /* Components */ 
 @import './components/counter.css';
+@import './components/configuration.css';
+@import './components/modal.css'

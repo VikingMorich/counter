@@ -3,7 +3,8 @@ import {
     REMOVE_COUNTER,
     CHANGE_INITIAL_VALUE,
     ENABLE_DEAD_MODE,
-    DISABLE_DEAD_MODE
+    DISABLE_DEAD_MODE,
+    TOGGLE_MODAL
 } from '../types/counter';
 
 export const addCounter = (counterIds) => ({
@@ -27,4 +28,8 @@ export const enableDeadMode = () => ({
 
 export const disableDeadMode = () => ({
     type: DISABLE_DEAD_MODE
+})
+
+export const toggleModal = () => ({
+    type: TOGGLE_MODAL
 })

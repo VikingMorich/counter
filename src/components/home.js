@@ -1,5 +1,6 @@
 import React from 'react'
 import Counter from '../containers/counter';
+import Modal from '../containers/modal'
 
 
 export class Home extends React.Component {
@@ -9,7 +10,7 @@ export class Home extends React.Component {
 
   addCounter = () => {
     let newPlayerIds = this.props.playerIds
-    const playerLength = this.props.playerIds.length + 1
+    const playerLength = 'Player' + (this.props.playerIds.length + 1)
     newPlayerIds.push(playerLength)
     this.props.addCounter(newPlayerIds)
     this.setState(() => {
@@ -36,9 +37,15 @@ export class Home extends React.Component {
     setTimeout(() => {this.props.addCounter(oldPlayerIds)}, 1);
   }
 
+  openModal = () => {
+    console.log('modal')
+    this.props.toggleModal()
+  }
+
   render () {
     return (
       <div>
+        {this.props.modalActive && <Modal />}
         <h1>🎲 Game counter 🎲</h1>
         <div className="button__container">
           <div className="button" onClick={this.addCounter}>
@@ -49,6 +56,9 @@ export class Home extends React.Component {
           </div>
           <div className="button" onClick={this.resetCounters}>
             <p>Reset Counters</p>
+          </div>
+          <div className="button" onClick={this.openModal}>
+            <p>M</p>
           </div>
         </div>
         <hr></hr>
