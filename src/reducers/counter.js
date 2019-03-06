@@ -6,15 +6,22 @@ import {
   DISABLE_DEAD_MODE,
   TOGGLE_MODAL,
   ENABLE_CUSTOM_NAMES,
-  DISABLE_CUSTOM_NAMES
+  DISABLE_CUSTOM_NAMES,
+  UPDATE_COUNTERS,
+  ENABLE_LEADER,
+  DISABLE_LEADER,
+  SET_LEADER
 } from '../actions/types/counter'
 
 export const initialState = {
   count: 0,
   playerIds: ['Player1'],
+  playerPoints: [0],
   deadMode: false,
   modalActive: false,
-  customNames: false
+  customNames: false,
+  markLeader: false,
+  leaderId: null
 }
 
 export default (state = initialState, action) => {
@@ -55,9 +62,29 @@ export default (state = initialState, action) => {
         customNames: true
       }
     case DISABLE_CUSTOM_NAMES:
-      return{
+      return {
         ...state,
         customNames: false
+      }
+    case UPDATE_COUNTERS:
+      return {
+        ...state,
+        playerPoints: action.newCounters
+      }
+    case ENABLE_LEADER:
+      return {
+        ...state,
+        markLeader: true
+      }
+    case DISABLE_LEADER:
+      return {
+        ...state,
+        markLeader: false
+      }
+    case SET_LEADER:
+      return {
+        ...state,
+        leaderId: action.leaderId
       }
     default:
       return state;

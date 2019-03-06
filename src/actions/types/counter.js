@@ -6,3 +6,7 @@ export const DISABLE_DEAD_MODE      = 'DISABLE_DEAD_MODE';
 export const TOGGLE_MODAL           = 'TOGGLE_MODAL';
 export const ENABLE_CUSTOM_NAMES    = 'ENABLE_CUSTOM_NAMES';
 export const DISABLE_CUSTOM_NAMES   = 'DISABLE_CUSTOM_NAMES';
+export const UPDATE_COUNTERS        = 'UPDATE_COUNTERS';
+export const ENABLE_LEADER          = 'ENABLE_LEADER';
+export const DISABLE_LEADER         = 'DISABLE_LEADER';
+export const SET_LEADER             = 'SET_LEADER';

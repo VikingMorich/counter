@@ -6,7 +6,11 @@ import {
     DISABLE_DEAD_MODE,
     TOGGLE_MODAL,
     ENABLE_CUSTOM_NAMES,
-    DISABLE_CUSTOM_NAMES
+    DISABLE_CUSTOM_NAMES,
+    UPDATE_COUNTERS,
+    ENABLE_LEADER,
+    DISABLE_LEADER,
+    SET_LEADER
 } from '../types/counter';
 
 export const addCounter = (counterIds) => ({
@@ -42,4 +46,22 @@ export const enableCustomNames = () => ({
 
 export const disableCustomNames = () => ({
     type: DISABLE_CUSTOM_NAMES
+})
+
+export const updateCounters = (newCounters) => ({
+    type: UPDATE_COUNTERS,
+    newCounters
+})
+
+export const enableLeader = () => ({
+    type: ENABLE_LEADER
+})
+
+export const disableLeader = () => ({
+    type: DISABLE_LEADER
+})
+
+export const setLeader = (leaderId) => ({
+    type: SET_LEADER,
+    leaderId
 })

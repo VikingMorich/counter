@@ -11,6 +11,9 @@ export class Counter extends React.Component {
     }
 
     increment () {
+        if (this.props.markLeader) {
+            this.updateCounters(this.props.id, this.state.count + 1)
+        }
         this.setState((state) => {
             return {
                 count: state.count + 1
@@ -18,7 +21,32 @@ export class Counter extends React.Component {
         });
     }
 
+    updateCounters (id, val) {
+        let newCounters = this.props.playerPoints;
+        newCounters[this.props.playerIds.indexOf(id)] = val
+        this.props.updateCounters(newCounters)
+        const leader = this.findLeader(newCounters)
+        this.props.setLeader(leader)
+    }
+
+    findLeader (newCounters) {
+        const maxVal = Math.max(...newCounters)
+        let isUnique = true
+        let index
+        for (let i = 0; i<newCounters.length; i++) {
+            if (newCounters[i] === maxVal) {
+                if (!isUnique) return null
+                index = i;
+                isUnique = false
+            }
+        }
+        return this.props.playerIds[index]
+    }
+
     decrement () {
+        if (this.props.markLeader) {
+            this.updateCounters(this.props.id, this.state.count - 1)
+        }
         this.setState((state) => {
             return {
                 count: state.count - 1
@@ -59,7 +87,9 @@ export class Counter extends React.Component {
                     </React.Fragment>
                 ) : (
                     <React.Fragment>
-                        <h3>{this.props.id}</h3>
+                            {(this.props.leaderId === this.props.id && this.props.markLeader) ?
+                                (<h3>🏆😎 - {this.props.id} - 😎🏆</h3>) :
+                            (<h3>{this.props.id}</h3>)}
                         <div className="counter__container">
                             <div className="counter__button">
                                 <p className="counter__button--value" onClick={this.decrement}>-</p>

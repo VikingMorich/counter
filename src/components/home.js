@@ -35,6 +35,13 @@ export class Home extends React.Component {
     const oldPlayerIds = this.props.playerIds
     this.props.removeCounter([])
     setTimeout(() => {this.props.addCounter(oldPlayerIds)}, 1);
+    this.props.setLeader(null)
+    //bucle de startingcount
+    let newCounters = [];
+    for (let i = 0; i < this.props.playerIds.length; i++) {
+      newCounters.push(this.props.startingCount)
+    }
+    this.props.updateCounters(newCounters)
   }
 
   openModal = () => {
