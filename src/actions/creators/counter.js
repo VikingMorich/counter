@@ -4,7 +4,9 @@ import {
     CHANGE_INITIAL_VALUE,
     ENABLE_DEAD_MODE,
     DISABLE_DEAD_MODE,
-    TOGGLE_MODAL
+    TOGGLE_MODAL,
+    ENABLE_CUSTOM_NAMES,
+    DISABLE_CUSTOM_NAMES
 } from '../types/counter';
 
 export const addCounter = (counterIds) => ({
@@ -32,4 +34,12 @@ export const disableDeadMode = () => ({
 
 export const toggleModal = () => ({
     type: TOGGLE_MODAL
+})
+
+export const enableCustomNames = () => ({
+    type: ENABLE_CUSTOM_NAMES
+})
+
+export const disableCustomNames = () => ({
+    type: DISABLE_CUSTOM_NAMES
 })

@@ -7,7 +7,8 @@ const mapStateToProps = (state) => {
     return {
         playerIds: state.counter.playerIds,
         startingCount: state.counter.count,
-        modalActive: state.counter.modalActive
+        modalActive: state.counter.modalActive,
+        customNames: state.counter.customNames
     }
 }
 

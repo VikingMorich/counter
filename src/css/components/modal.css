@@ -10,9 +10,37 @@
 }
 
 .modal__box{
-    width: 10em;
-    height: 6em;
-    background-color: white;
-    margin-left: auto;
+    width: 15em;
+    height: 10.5em;
+    background-color: #C5E7DA;
+    margin: auto;
+    margin-top: 5em;
+    border-style: solid;
+    border-color: #407561;
+    border-width: 2px;
+}
+
+.modal__title{
+    margin-top: 0.5em;
+}
+
+.modal__confirm{
+    background-color: #86C2AB;
+    height: 2em;
+    width: 5em;
     margin-right: auto;
+    margin-left: auto;
+    margin-top: 1em;
+    border-style: outset;
+    border-color: #69A890;
+}
+
+.confirm__text{
+    line-height: 26px;
+}
+
+.close__modal{
+    text-align: right;
+    margin-right: 0.4em;
+    margin-top: 0.4em;
 }

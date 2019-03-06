@@ -38,7 +38,6 @@ export class Home extends React.Component {
   }
 
   openModal = () => {
-    console.log('modal')
     this.props.toggleModal()
   }
 
@@ -48,7 +47,7 @@ export class Home extends React.Component {
         {this.props.modalActive && <Modal />}
         <h1>🎲 Game counter 🎲</h1>
         <div className="button__container">
-          <div className="button" onClick={this.addCounter}>
+          <div className="button" onClick={this.props.customNames ? this.openModal : this.addCounter}>
             <p>Add Counter</p>
           </div>
           <div className="button" onClick={this.removeCounter}>
@@ -56,9 +55,6 @@ export class Home extends React.Component {
           </div>
           <div className="button" onClick={this.resetCounters}>
             <p>Reset Counters</p>
-          </div>
-          <div className="button" onClick={this.openModal}>
-            <p>M</p>
           </div>
         </div>
         <hr></hr>

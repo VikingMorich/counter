@@ -19,6 +19,16 @@ export class Configuration extends React.Component {
                 this.props.disableDeadMode()
             }
         }
+        if (document.getElementById("customNames").checked) {
+            if (!this.props.customNames) {
+                this.props.enableCustomNames()
+            }
+        }
+        else {
+            if (this.props.customNames) {
+                this.props.disableCustomNames()
+            }
+        }
     };
 
     render() {
@@ -29,6 +39,10 @@ export class Configuration extends React.Component {
                     <div className="configForm">
                         <label>Starting value</label>
                         <input className="configFormInput" type="number" id="startingValue" placeholder={this.props.startingCount}/>
+                    </div>
+                    <div className="configForm">
+                        <label>Custom names</label>
+                        <input type="checkbox" id="customNames" defaultChecked={this.props.customNames}/>
                     </div>
                     <div className="configForm">
                         <label>Dead Mode</label>

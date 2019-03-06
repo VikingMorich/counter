@@ -1,12 +1,15 @@
 import { connect } from 'react-redux';
-import { toggleModal } from '../actions/creators/counter';
-import Modal from '../components/modal'
+import { toggleModal, addCounter } from '../actions/creators/counter';
+import Modal from '../components/modal';
 
-const mapStateToProps = () => {
-    return {}
+const mapStateToProps = (state) => {
+    return {
+        playerIds: state.counter.playerIds
+    }
 }
 
 const mapDispatchToProps = (dispatch) => ({
+    closeAndAddModal: (counterIds) => dispatch(toggleModal()) && dispatch(addCounter(counterIds)),
     closeModal: () => dispatch(toggleModal())
 })
 

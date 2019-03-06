@@ -4,14 +4,17 @@ import {
   CHANGE_INITIAL_VALUE,
   ENABLE_DEAD_MODE,
   DISABLE_DEAD_MODE,
-  TOGGLE_MODAL
+  TOGGLE_MODAL,
+  ENABLE_CUSTOM_NAMES,
+  DISABLE_CUSTOM_NAMES
 } from '../actions/types/counter'
 
 export const initialState = {
   count: 0,
   playerIds: ['Player1'],
   deadMode: false,
-  modalActive: false
+  modalActive: false,
+  customNames: false
 }
 
 export default (state = initialState, action) => {
@@ -45,6 +48,16 @@ export default (state = initialState, action) => {
       return {
         ...state,
         modalActive: !state.modalActive
+      }
+    case ENABLE_CUSTOM_NAMES:
+      return {
+        ...state,
+        customNames: true
+      }
+    case DISABLE_CUSTOM_NAMES:
+      return{
+        ...state,
+        customNames: false
       }
     default:
       return state;
