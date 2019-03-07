@@ -62,12 +62,8 @@ export class Counter extends React.Component {
             }
         }
     }
-//{(this.props.deadMode && this.state.count === 0) && <p></p>}
+
     render () {
-        /*let counter;
-        if (this.props.deadMode && this.state.count === 0) {
-            
-        }*/
         return (
             <div>
                 {(this.props.deadMode && this.state.count === 0) ? (

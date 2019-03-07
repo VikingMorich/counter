@@ -13,6 +13,9 @@ export class Home extends React.Component {
     const playerLength = 'Player' + (this.props.playerIds.length + 1)
     newPlayerIds.push(playerLength)
     this.props.addCounter(newPlayerIds)
+    let newCounters = this.props.playerPoints
+    newCounters.push(this.props.startingCount)
+    this.props.updateCounters(newCounters);
     this.setState(() => {
       return {
         playerNumber: this.props.playerIds.length
@@ -24,6 +27,9 @@ export class Home extends React.Component {
     let newPlayerIds = this.props.playerIds
     newPlayerIds.pop();
     this.props.removeCounter(newPlayerIds)
+    let newCounters = this.props.playerPoints
+    newCounters.pop();
+    this.props.updateCounters(newCounters);
     this.setState(() => {
       return {
         playerNumber: this.props.playerIds.length
@@ -46,6 +52,10 @@ export class Home extends React.Component {
 
   openModal = () => {
     this.props.toggleModal()
+  }
+
+  componentDidMount() {
+    this.resetCounters()
   }
 
   render () {

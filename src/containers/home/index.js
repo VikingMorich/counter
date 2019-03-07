@@ -6,6 +6,7 @@ import {addCounter, removeCounter, toggleModal, setLeader, updateCounters} from 
 const mapStateToProps = (state) => {
     return {
         playerIds: state.counter.playerIds,
+        playerPoints: state.counter.playerPoints,
         startingCount: state.counter.count,
         modalActive: state.counter.modalActive,
         customNames: state.counter.customNames
