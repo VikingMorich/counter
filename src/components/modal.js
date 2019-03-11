@@ -5,6 +5,10 @@ export class Modal extends React.Component {
     userConfirmation () {
         let counterIds = this.props.playerIds;
         if (document.getElementById('nameInput').value !== '') {
+            if (counterIds.indexOf(document.getElementById('nameInput').value) !== -1) {
+                alert("⚠  This name is already in use  ⚠");
+                return
+            }
             counterIds.push(document.getElementById('nameInput').value);
         } else {
             counterIds.push('Player' + (this.props.playerIds.length + 1));
