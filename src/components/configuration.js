@@ -40,11 +40,21 @@ export class Configuration extends React.Component {
                 this.props.disableLeader()
             }
         }
+        //Advanced input
+
+        //feedback user
+        this.props.toggleConfiguration();
+        setTimeout(() => this.props.toggleConfiguration(), 2000);
     };
 
     render() {
         return (
             <div>
+                {(this.props.sendConfig) && 
+                <div className='informative__popup'>
+                    <span>Configuration sended</span>
+                </div>}
+                
                 <h1>Configuration</h1>
                 <div>
                     <div className="configForm">

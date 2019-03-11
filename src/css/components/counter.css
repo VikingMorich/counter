@@ -64,3 +64,20 @@
   margin-block-start: 0.2em;
   margin-block-end: 0.1em;
 }
+
+.counter__wrapper {
+  -webkit-animation-name: opening; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: opening;
+  animation-duration: 0.3s;
+}
+
+@-webkit-keyframes opning {
+  from {margin-left: -120px; opacity: 0;}
+  to {margin-left: 0px; opacity: 1;}
+}
+
+@keyframes opening {
+  from {margin-left: -120px; opacity: 0;}
+  to {margin-left: 0px; opacity: 1;}
+}

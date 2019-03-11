@@ -25,16 +25,18 @@ export class Home extends React.Component {
 
   removeCounter = () => {
     let newPlayerIds = this.props.playerIds
-    newPlayerIds.pop();
-    this.props.removeCounter(newPlayerIds)
     let newCounters = this.props.playerPoints
-    newCounters.pop();
-    this.props.updateCounters(newCounters);
-    this.setState(() => {
-      return {
-        playerNumber: this.props.playerIds.length
-      };
-    });
+    const element = document.getElementById(newPlayerIds[(newPlayerIds.length - 1)])
+    if (element) {
+      newPlayerIds.pop();
+      newCounters.pop();
+      this.props.updateCounters(newCounters);
+      this.setState(() => {
+        return {
+          playerNumber: this.props.playerIds.length
+        };
+      });
+    }
   }
 
   resetCounters = () => {

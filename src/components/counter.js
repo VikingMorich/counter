@@ -65,7 +65,7 @@ export class Counter extends React.Component {
 
     render () {
         return (
-            <div>
+            <div id={this.props.id} className="counter__wrapper">
                 {(this.props.deadMode && this.state.count === 0) ? (
                     <React.Fragment>
                         <h3>{this.props.id}</h3>

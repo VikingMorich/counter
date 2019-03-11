@@ -10,7 +10,8 @@ import {
   UPDATE_COUNTERS,
   ENABLE_LEADER,
   DISABLE_LEADER,
-  SET_LEADER
+  SET_LEADER,
+  TOGGLE_CONFIGURATION
 } from '../actions/types/counter'
 
 export const initialState = {
@@ -21,7 +22,8 @@ export const initialState = {
   modalActive: false,
   customNames: false,
   markLeader: false,
-  leaderId: null
+  leaderId: null,
+  sendConfiguration: false
 }
 
 export default (state = initialState, action) => {
@@ -85,6 +87,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         leaderId: action.leaderId
+      }
+    case TOGGLE_CONFIGURATION:
+      return {
+        ...state,
+        sendConfiguration: !state.sendConfiguration
       }
     default:
       return state;

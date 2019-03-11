@@ -10,7 +10,8 @@ import {
     UPDATE_COUNTERS,
     ENABLE_LEADER,
     DISABLE_LEADER,
-    SET_LEADER
+    SET_LEADER,
+    TOGGLE_CONFIGURATION
 } from '../types/counter';
 
 export const addCounter = (counterIds) => ({
@@ -64,4 +65,8 @@ export const disableLeader = () => ({
 export const setLeader = (leaderId) => ({
     type: SET_LEADER,
     leaderId
+})
+
+export const toggleConfiguration = () => ({
+    type: TOGGLE_CONFIGURATION
 })

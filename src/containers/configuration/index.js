@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
 import Configuration from '../../components/configuration';
-import { changeInitialValue, enableDeadMode, disableDeadMode, enableCustomNames, disableCustomNames, enableLeader, disableLeader } from '../../actions/creators/counter'
+import { changeInitialValue, enableDeadMode, disableDeadMode, enableCustomNames, disableCustomNames, enableLeader, disableLeader, toggleConfiguration } from '../../actions/creators/counter'
 
 const mapStateToProps = (state) => {
     return {
         startingCount: state.counter.count,
         deadMode: state.counter.deadMode,
         customNames: state.counter.customNames,
-        markLeader: state.counter.markLeader
+        markLeader: state.counter.markLeader,
+        sendConfig: state.counter.sendConfiguration
     }
 }
 
@@ -18,7 +19,8 @@ const mapDispatchToProps = (dispatch) => ({
     enableCustomNames: () => dispatch(enableCustomNames()),
     disableCustomNames: () => dispatch(disableCustomNames()),
     enableLeader: () => dispatch(enableLeader()),
-    disableLeader: () => dispatch(disableLeader())
+    disableLeader: () => dispatch(disableLeader()),
+    toggleConfiguration: () => dispatch(toggleConfiguration())
 })
 
 export default connect(

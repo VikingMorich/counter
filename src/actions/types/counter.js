@@ -10,3 +10,4 @@ export const UPDATE_COUNTERS        = 'UPDATE_COUNTERS';
 export const ENABLE_LEADER          = 'ENABLE_LEADER';
 export const DISABLE_LEADER         = 'DISABLE_LEADER';
 export const SET_LEADER             = 'SET_LEADER';
+export const TOGGLE_CONFIGURATION   = 'TOGGLE_CONFIGURATION';
