@@ -40,7 +40,16 @@ export class Configuration extends React.Component {
                 this.props.disableLeader()
             }
         }
-        //Advanced input
+        //editableColours
+        if (document.getElementById("editableColours").checked) {
+            if (!this.props.editableColours) {
+                this.props.enableEditableColours()
+            }
+        } else {
+            if (this.props.editableColours) {
+                this.props.disableEditableColours()
+            }
+        }
 
         //feedback user
         this.props.toggleConfiguration();
@@ -72,6 +81,10 @@ export class Configuration extends React.Component {
                     <div className="configForm">
                         <label>Mark Leader</label>
                         <input type="checkbox" id="markLeader" defaultChecked={this.props.markLeader}/>
+                    </div>
+                    <div className="configForm">
+                        <label>Edit Colours</label>
+                        <input type="checkbox" id="editableColours" defaultChecked={this.props.editableColours} />
                     </div>
                     <br></br>
                     <button onClick={this.sendForm}>Send</button>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Counter from '../containers/counter';
-import Modal from '../containers/modal'
-
+import Modal from '../containers/modal';
+import ColourModal from '../containers/colourModal';
 
 export class Home extends React.Component {
   state = {
@@ -64,6 +64,7 @@ export class Home extends React.Component {
     return (
       <div>
         {this.props.modalActive && <Modal />}
+        {this.props.colourModal && <ColourModal />}
         <h1>🎲 Game counter 🎲</h1>
         <div className="button__container">
           <div className="button" onClick={this.props.customNames ? this.openModal : this.addCounter}>

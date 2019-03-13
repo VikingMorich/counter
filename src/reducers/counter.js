@@ -11,7 +11,10 @@ import {
   ENABLE_LEADER,
   DISABLE_LEADER,
   SET_LEADER,
-  TOGGLE_CONFIGURATION
+  TOGGLE_CONFIGURATION,
+  ENABLE_EDITABLECOLOURS,
+  DISABLE_EDITABLECOLOURS,
+  TOGGLE_COLOURMODAL
 } from '../actions/types/counter'
 
 export const initialState = {
@@ -23,7 +26,10 @@ export const initialState = {
   customNames: false,
   markLeader: false,
   leaderId: null,
-  sendConfiguration: false
+  sendConfiguration: false,
+  editableColours: true,
+  colourModal: false,
+  editableCounter: ''
 }
 
 export default (state = initialState, action) => {
@@ -92,6 +98,22 @@ export default (state = initialState, action) => {
       return {
         ...state,
         sendConfiguration: !state.sendConfiguration
+      }
+    case ENABLE_EDITABLECOLOURS:
+      return {
+        ...state,
+        editableColours: true
+      }
+    case DISABLE_EDITABLECOLOURS:
+      return {
+        ...state,
+        editableColours: false
+      }
+    case TOGGLE_COLOURMODAL:
+      return {
+        ...state,
+        colourModal: !state.colourModal,
+        editableCounter: action.id
       }
     default:
       return state;

@@ -11,7 +11,10 @@ import {
     ENABLE_LEADER,
     DISABLE_LEADER,
     SET_LEADER,
-    TOGGLE_CONFIGURATION
+    TOGGLE_CONFIGURATION,
+    ENABLE_EDITABLECOLOURS,
+    DISABLE_EDITABLECOLOURS,
+    TOGGLE_COLOURMODAL
 } from '../types/counter';
 
 export const addCounter = (counterIds) => ({
@@ -69,4 +72,17 @@ export const setLeader = (leaderId) => ({
 
 export const toggleConfiguration = () => ({
     type: TOGGLE_CONFIGURATION
+})
+
+export const enableEditableColours = () => ({
+    type: ENABLE_EDITABLECOLOURS
+})
+
+export const disableEditableColours = () => ({
+    type: DISABLE_EDITABLECOLOURS
+})
+
+export const toggleColourModal = (id) =>({
+    type: TOGGLE_COLOURMODAL,
+    id
 })

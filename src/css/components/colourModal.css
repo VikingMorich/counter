@@ -1,0 +1,52 @@
+.colourSelector {
+    width: 2em;
+    height: 2em;
+    margin-bottom: 0.5em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    border: 1px solid black;
+}
+
+.modalColour__box{
+    width: 15em;
+    height: 14.5em;
+    background-color: #C5E7DA;
+    margin: auto;
+    margin-top: 5em;
+    border-style: solid;
+    border-color: #407561;
+    border-width: 2px;
+}
+
+.c-red{
+    background-color: red;
+}
+.c-brown{
+    background-color: brown;
+}
+.c-green{
+    background-color: green;
+}
+.c-yellow{
+    background-color: yellow;
+}
+.c-orange{
+    background-color: orange;
+}
+.c-blue{
+    background-color: blue;
+}
+.c-purple{
+    background-color: purple;
+}
+.c-pink{
+    background-color: pink;
+}
+
+.is-selected {
+    border: 4px solid black;
+}
+
+table{
+    margin: auto;
+}

@@ -1,12 +1,11 @@
 .counter__container {
-  margin-top: 3em;
+  margin-top: 0em;
   background-color: mediumseagreen;
   height: 4em;
   width: 15em;
   border-radius: 1em;
   display: flex;
   justify-content: center;
-  margin: auto;
 }
 
 .counter__container--dead {
@@ -80,4 +79,16 @@
 @keyframes opening {
   from {margin-left: -120px; opacity: 0;}
   to {margin-left: 0px; opacity: 1;}
+}
+
+.counter__box{
+  display: flex;
+  align-items: center;
+  width: 15em;
+  margin: auto;
+}
+
+.counter__edit{
+  margin-left: 1em;
+  font-size: 1.3em;
 }

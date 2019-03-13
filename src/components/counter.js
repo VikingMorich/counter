@@ -86,17 +86,21 @@ export class Counter extends React.Component {
                             {(this.props.leaderId === this.props.id && this.props.markLeader) ?
                                 (<h3>🏆😎 - {this.props.id} - 😎🏆</h3>) :
                             (<h3>{this.props.id}</h3>)}
-                        <div className="counter__container">
-                            <div className="counter__button">
-                                <p className="counter__button--value" onClick={this.decrement}>-</p>
+                        <div className="counter__box">
+                            <div className="counter__container">
+                                <div className="counter__button">
+                                    <p className="counter__button--value" onClick={this.decrement}>-</p>
+                                </div>
+                                <div className="counter__screen">
+                                    <p className="counter__value">{this.state.count}</p>
+                                </div>
+                                <div className="counter__button">
+                                    <p className="counter__button--value" onClick={this.increment}>+</p>
+                                </div>
                             </div>
-                            <div className="counter__screen">
-                                <p className="counter__value">{this.state.count}</p>
-                            </div>
-                            <div className="counter__button">
-                                <p className="counter__button--value" onClick={this.increment}>+</p>
-                            </div>
-                        </div>
+                                {this.props.editableColours && <span className="counter__edit" onClick={() => this.props.toggleColourModal(this.props.id)}>🎨</span>}
+                        </div>    
+                        
                     </React.Fragment>
                 )}                
             </div>
