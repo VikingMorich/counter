@@ -1,6 +1,5 @@
 .counter__container {
   margin-top: 0em;
-  background-color: mediumseagreen;
   height: 4em;
   width: 15em;
   border-radius: 1em;
@@ -39,7 +38,6 @@
 .counter__button{
   width: 2.5em;
   height: 2.5em;
-  background-color: #2e9c5f;
   margin-right: 0.5em;
   margin-left: 0.5em;
   border-radius: 50%;
@@ -91,4 +89,68 @@
 .counter__edit{
   margin-left: 1em;
   font-size: 1.3em;
+}
+
+.cc-red {
+  background-color: red;
+}
+
+.cb-red {
+  background-color: darkred;
+}
+
+.cc-brown {
+  background-color: brown;
+}
+
+.cb-brown {
+  background-color: #683b11;
+}
+
+.cc-green {
+  background-color: mediumseagreen;
+}
+
+.cb-green {
+  background-color: #2e9c5f;
+}
+
+.cc-yellow {
+  background-color: yellow;
+}
+
+.cb-yellow {
+  background-color: #9a9c2e;
+}
+
+.cc-orange {
+  background-color: orange;
+}
+
+.cb-orange {
+  background-color: #ec9614;
+}
+
+.cc-blue {
+  background-color: #409bc5;
+}
+
+.cb-blue {
+  background-color: #2e5e9c;
+}
+
+.cc-purple {
+  background-color: purple;
+}
+
+.cb-purple {
+  background-color: #70219e;
+}
+
+.cc-pink {
+  background-color: pink;
+}
+
+.cb-pink {
+  background-color: #c01cb2;
 }

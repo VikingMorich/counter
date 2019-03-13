@@ -14,20 +14,22 @@ import {
   TOGGLE_CONFIGURATION,
   ENABLE_EDITABLECOLOURS,
   DISABLE_EDITABLECOLOURS,
-  TOGGLE_COLOURMODAL
+  TOGGLE_COLOURMODAL,
+  UPDATE_COUNTERCOLOURS
 } from '../actions/types/counter'
 
 export const initialState = {
   count: 0,
   playerIds: ['Player1'],
   playerPoints: [0],
+  playerColours: ['green'],
   deadMode: false,
   modalActive: false,
   customNames: false,
   markLeader: false,
   leaderId: null,
   sendConfiguration: false,
-  editableColours: true,
+  editableColours: false,
   colourModal: false,
   editableCounter: ''
 }
@@ -114,6 +116,11 @@ export default (state = initialState, action) => {
         ...state,
         colourModal: !state.colourModal,
         editableCounter: action.id
+      }
+    case UPDATE_COUNTERCOLOURS:
+      return {
+        ...state,
+        playerColours: action.newColours
       }
     default:
       return state;

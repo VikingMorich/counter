@@ -4,7 +4,7 @@ export class Counter extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            count: props.count,
+            count: props.count
         }
         this.increment = this.increment.bind(this);
         this.decrement = this.decrement.bind(this);
@@ -87,14 +87,14 @@ export class Counter extends React.Component {
                                 (<h3>🏆😎 - {this.props.id} - 😎🏆</h3>) :
                             (<h3>{this.props.id}</h3>)}
                         <div className="counter__box">
-                            <div className="counter__container">
-                                <div className="counter__button">
+                                <div className={`counter__container cc-${this.props.playerColours[this.props.index]}`}>
+                                <div className={`counter__button cb-${this.props.playerColours[this.props.index]}`}>
                                     <p className="counter__button--value" onClick={this.decrement}>-</p>
                                 </div>
                                 <div className="counter__screen">
                                     <p className="counter__value">{this.state.count}</p>
                                 </div>
-                                <div className="counter__button">
+                                <div className={`counter__button cb-${this.props.playerColours[this.props.index]}`}>
                                     <p className="counter__button--value" onClick={this.increment}>+</p>
                                 </div>
                             </div>

@@ -16,6 +16,9 @@ export class Home extends React.Component {
     let newCounters = this.props.playerPoints
     newCounters.push(this.props.startingCount)
     this.props.updateCounters(newCounters);
+    let newColours = this.props.playerColours
+    newColours.push('green')
+    this.props.updateCounterColours(newColours)
     this.setState(() => {
       return {
         playerNumber: this.props.playerIds.length
@@ -26,11 +29,14 @@ export class Home extends React.Component {
   removeCounter = () => {
     let newPlayerIds = this.props.playerIds
     let newCounters = this.props.playerPoints
+    let newColours = this.props.playerColours
     const element = document.getElementById(newPlayerIds[(newPlayerIds.length - 1)])
     if (element) {
-      newPlayerIds.pop();
-      newCounters.pop();
-      this.props.updateCounters(newCounters);
+      newPlayerIds.pop()
+      newCounters.pop()
+      newColours.pop()
+      this.props.updateCounters(newCounters)
+      this.props.updateCounterColours(newColours)
       this.setState(() => {
         return {
           playerNumber: this.props.playerIds.length
@@ -78,7 +84,7 @@ export class Home extends React.Component {
           </div>
         </div>
         <hr></hr>
-        {this.props.playerIds.map(id => <Counter id={id} key={id} count={this.props.startingCount} />)}
+        {this.props.playerIds.map((id, index) => <Counter id={id} key={id} index={index} count={this.props.startingCount} />)}
       </div>
     );
   }

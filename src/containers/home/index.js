@@ -1,12 +1,13 @@
 import { push } from 'connected-react-router'
 import {connect} from 'react-redux';
 import Home from '../../components/home';
-import { addCounter, removeCounter, toggleModal, setLeader, updateCounters} from '../../actions/creators/counter'
+import { addCounter, removeCounter, toggleModal, setLeader, updateCounters, updateCounterColours} from '../../actions/creators/counter'
 
 const mapStateToProps = (state) => {
     return {
         playerIds: state.counter.playerIds,
         playerPoints: state.counter.playerPoints,
+        playerColours: state.counter.playerColours,
         startingCount: state.counter.count,
         modalActive: state.counter.modalActive,
         customNames: state.counter.customNames,
@@ -20,7 +21,8 @@ const mapDispatchToProps = (dispatch) => ({
       removeCounter: (counterIds) => dispatch(removeCounter(counterIds)),
       toggleModal: () => dispatch(toggleModal()),
       setLeader: (leader) => dispatch(setLeader(leader)),
-      updateCounters: (newCounters) => dispatch(updateCounters(newCounters))
+      updateCounters: (newCounters) => dispatch(updateCounters(newCounters)),
+      updateCounterColours: (newColours) => dispatch(updateCounterColours(newColours))
 })
 
 export default connect(

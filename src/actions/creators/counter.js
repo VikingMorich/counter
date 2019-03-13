@@ -14,7 +14,8 @@ import {
     TOGGLE_CONFIGURATION,
     ENABLE_EDITABLECOLOURS,
     DISABLE_EDITABLECOLOURS,
-    TOGGLE_COLOURMODAL
+    TOGGLE_COLOURMODAL,
+    UPDATE_COUNTERCOLOURS
 } from '../types/counter';
 
 export const addCounter = (counterIds) => ({
@@ -85,4 +86,9 @@ export const disableEditableColours = () => ({
 export const toggleColourModal = (id) =>({
     type: TOGGLE_COLOURMODAL,
     id
+})
+
+export const updateCounterColours = (newColours) => ({
+    type: UPDATE_COUNTERCOLOURS,
+    newColours
 })

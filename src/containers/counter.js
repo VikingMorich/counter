@@ -6,6 +6,7 @@ const mapStateToProps = (state) => {
     return {
         deadMode: state.counter.deadMode,
         playerIds: state.counter.playerIds,
+        playerColours: state.counter.playerColours,
         markLeader: state.counter.markLeader,
         playerPoints: state.counter.playerPoints,
         leaderId: state.counter.leaderId,
