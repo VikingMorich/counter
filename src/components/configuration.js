@@ -4,12 +4,10 @@ export class Configuration extends React.Component {
     
     sendForm = () => {
         let value
-        if (document.getElementById("startingValue").value === "") {
-            value = 0;
-        } else {
+        if (document.getElementById("startingValue").value !== "") {
             value = parseInt(document.getElementById("startingValue").value)
+            this.props.changeInitialValue(value);
         }
-        this.props.changeInitialValue(value);
         //deadMode
         if (document.getElementById("deadMode").checked) {
             if (!this.props.deadMode) {
