@@ -21,6 +21,15 @@ export class Tournament extends React.Component {
         this.setState({ 'test': 'me' })
     }
 
+    startTournament () {
+        if (this.props.players.length < 2) {
+            alert('⚠ The minimum number of players to start a tournament are 2 ⚠')
+        }
+        else {
+            this.props.startTournament()
+        }
+    }
+
     
     render() {
         return (
@@ -38,7 +47,7 @@ export class Tournament extends React.Component {
                         <span onClick={() => this.addPlayer()}><b>Add</b></span>
                     </div>
                 </div>
-                <div className="next__button" onClick={this.props.startTournament}>
+                <div className="next__button" onClick={() => this.startTournament()}>
                     <span><b>Start Tournament</b></span>
                 </div>
             </div>
