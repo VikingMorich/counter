@@ -1,0 +1,51 @@
+.next__button{
+    background-color: #a2d89b;
+    width: 11em;
+    height: 2.5em;
+    border-color: #6eac44;
+    border-style: outset;
+    margin: auto;
+    margin-top: 2em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.participants__box{
+    border: 3px dashed #111111;
+    margin: auto;
+    min-height: 10em;
+    width: 15em;
+    background-color: #c5efc2;
+}
+
+.member__list {
+    text-align: left;
+    justify-content: left
+}
+
+.feedback__user{
+    display: flex;
+    margin-top: 2em;
+    justify-content: center;
+}
+
+.input__member{
+    height: 2.5em;
+    width: 13em;
+    background-color: #fcfff9;
+    margin-left: 1em;
+}
+
+.add__button{
+    background-color: #a2d89b;
+    width: 5em;
+    height: 2.5em;
+    border-color: #6eac44;
+    border-style: outset;
+    margin-left: 1em;
+    margin-right: 1em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
