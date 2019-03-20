@@ -5,7 +5,10 @@ import {
 } from '../actions/types/tournament'
 
 export const initialState = {
-    players: ['Player1', 'Player2', 'Player3'],
+    players: ['Player1', 'Player2', 'Player3', 'Player4', 'Player5', 'Player6', 'Player7', 'Player8'],
+    players2: ['Player1', 'Player3', 'Player5', 'Player7'],
+    players3: ['Player1', 'Player5'],
+    players4: ['Player1'],
     tournamentStart: false
 }
 
