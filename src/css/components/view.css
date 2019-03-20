@@ -1,0 +1,37 @@
+.battle_camp {
+    background-image: linear-gradient(to right, #93E962, #45B39D);
+    margin-right: 2em;
+    margin-left: 2em;
+    text-align: left;
+    padding: 1em;
+    border: 2px solid black;
+    display: flex;
+}
+
+.members{
+    font-weight: bold;
+}
+
+.member_box {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.complete_arm {
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    height: 2.4em;
+    width: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 1.8em;
+    margin-left: 0.3em;
+}
+
+.hand_arm{
+    border-bottom: 2px solid black;
+    height: 2.4em;
+    width: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1.8em;
+}

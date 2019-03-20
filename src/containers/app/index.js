@@ -4,6 +4,7 @@ import Home from '../home'
 import About from '../about'
 import Configuration from '../configuration'
 import Tournament from '../tournament'
+import View from '../tournament/view'
 
 const App = () => (
   <div>
@@ -19,6 +20,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/tournament" component={Tournament} />
       <Route exact path="/about-us" component={About} />
+      <Route exact path="/tournament/start" component={View} />
     </main>
   </div>
 )

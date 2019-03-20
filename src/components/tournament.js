@@ -27,6 +27,7 @@ export class Tournament extends React.Component {
         }
         else {
             this.props.startTournament()
+            this.props.changePage()
         }
     }
 
