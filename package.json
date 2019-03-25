@@ -1,5 +1,5 @@
 {
-  "name": "Counter",
+  "name": "counter",
   "description": "React game counter",
   "author": "Enric Moriche <enricmoriche91@hotmail.com> Ivan Cordova <morpamz@hotmail.com>",
   "private": true,
@@ -16,6 +16,7 @@
   "devDependencies": {},
   "dependencies": {
     "connected-react-router": "4.5.0",
+    "babel-jest": "23.6.0",
     "prettier": "1.16.4",
     "react": "16.8.3",
     "react-dom": "16.8.3",

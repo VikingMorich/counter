@@ -1,0 +1,87 @@
+.launchpad__table{
+    background-image: linear-gradient(to bottom right, rgb(64, 66, 63), rgb(152, 156, 148));
+    height: 23em;
+    width: 20em;
+    margin: auto;
+    border-radius: 1em;
+    border: solid 3px black;
+}
+
+.launchpad__button {
+    width: 3.5em;
+    height: 3.5em;
+    background-color: #EDEAEA;
+    border: solid 2px black;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    margin-top: 0.5em;
+    border-radius: 0.5em;
+}
+
+.launchpad__button:active {
+    width: 3.5em;
+    height: 3.5em;
+    background-color: #FFFCA7;
+    border: solid 2px black;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    margin-top: 0.5em;
+    border-radius: 0.5em;
+}
+
+.launchpad__wrapper{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-top: 0.75em;
+    width: 86%;
+    justify-content: center;
+}
+
+.animated__button {
+    -webkit-animation-name: partyMode; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: partyMode;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    border: solid 3px;
+}
+
+.animated__button:active {
+    background-color: #FFFCA7;
+}
+
+@-webkit-keyframes partyMode {
+  0%   {border-color: #FF0000;}
+  16%  {border-color: #FFFF00;}
+  33%  {border-color: #1BFF00;}
+  49%  {border-color: #00FFF7;}
+  66%  {border-color: #001BFF;}
+  82%  {border-color: #FF00FF;}
+  100% {border-color: #FF0000;}
+}
+
+/* Standard syntax */
+@keyframes partyMode {
+  0%   {border-color: #FF0000;}
+  16%  {border-color: #FFFF00;}
+  33%  {border-color: #1BFF00;}
+  49%  {border-color: #00FFF7;}
+  66%  {border-color: #001BFF;}
+  82%  {border-color: #FF00FF;}
+  100% {border-color: #FF0000;}
+}
+
+.switch__wrapper {
+    height: 8em;
+    width: 18em;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: solid 3px black;
+    border-top: none;
+    background-image: linear-gradient(rgb(64, 66, 63), rgb(152, 156, 148));
+}

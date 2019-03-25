@@ -4,4 +4,6 @@
 @import './components/counter.css';
 @import './components/configuration.css';
 @import './components/modal.css';
-@import './components/colourModal.css'
+@import './components/colourModal.css';
+@import './components/launchpad.css';
+@import './components/toggleSwitch.css';
