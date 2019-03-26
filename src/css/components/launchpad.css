@@ -85,3 +85,64 @@
     border-top: none;
     background-image: linear-gradient(rgb(64, 66, 63), rgb(152, 156, 148));
 }
+
+
+.giphy{
+    height: 1.2em;
+    width: 1.2em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.launchpad__tittle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.launchpad__loop {
+    background-color: #ffd7c7 !important;
+}
+
+.active {
+    background-color: lightsalmon !important
+}
+
+.animated__button2 {
+    -webkit-animation-name: partyMode2; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: partyMode2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    border: solid 3px;
+}
+
+.animated__button2:active {
+    background-color: #FFFCA7;
+}
+
+@-webkit-keyframes partyMode2 {
+  0%   {border-color: #001BFF;}
+  16%  {border-color: #FF00FF;}
+  33%  {border-color: #FF0000;}
+  49%  {border-color: #FFFF00;}
+  66%  {border-color: #1BFF00;}
+  82%  {border-color: #00FFF7;}
+  100% {border-color: #001BFF;}
+}
+
+/* Standard syntax */
+@keyframes partyMode2 {
+  0%   {border-color: #001BFF;}
+  16%  {border-color: #FF00FF;}
+  33%  {border-color: #FF0000;}
+  49%  {border-color: #FFFF00;}
+  66%  {border-color: #1BFF00;}
+  82%  {border-color: #00FFF7;}
+  100% {border-color: #001BFF;}
+}
