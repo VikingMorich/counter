@@ -1,0 +1,14 @@
+.character__box{
+    width: 18em;
+    background-color: #7FD19B;
+    margin: auto;
+    margin-top: 1em;
+    padding: 1em;
+    padding-top: 0.1em;
+}
+
+.character__information {
+    width: 21em;
+    margin: auto;
+    margin-bottom: 1.5em;
+}

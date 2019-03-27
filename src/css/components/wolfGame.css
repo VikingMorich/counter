@@ -1,0 +1,40 @@
+.wolfPlayerList {
+    background-image: linear-gradient(to bottom right, #C5DAC6, #D2F1CD);
+    width: 18em;
+    min-height: 10em;
+    margin: auto;
+    border: 2px dashed black;
+    padding-bottom: 1.5em;
+}
+
+.input__players{
+    display: flex;
+    width: 18em;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.add__player {
+    margin-left: 0.5em;
+    background: #D2F1CD;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    align-items: center;
+}
+
+.playerId {
+    padding-right: 3em;
+    text-align: left;
+}
+
+.starting__button{
+    background: #D2F1CD;
+    width: 8em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2em;
+}
