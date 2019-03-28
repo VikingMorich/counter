@@ -25,6 +25,14 @@ export class wolfGame extends React.Component {
         this.props.removePlayer(newPlayers)
         this.setState({})
     }
+
+    startGame () {
+        if (this.props.players.length < 5) {
+            alert('The minimum number of players are 5 to play this game')
+        } else {
+            this.props.startGame()
+        }
+    }
     
     render() {
         return (
@@ -49,7 +57,7 @@ export class wolfGame extends React.Component {
                         </tbody>
                     </table>
                 </div>
-                <div className="starting__button" onClick={this.props.startGame}>
+                <div className="starting__button" onClick={() => this.startGame()}>
                     <span>Start Game</span>
                 </div>
 
