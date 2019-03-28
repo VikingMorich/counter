@@ -5,6 +5,7 @@ import About from '../about'
 import Configuration from '../configuration'
 import wolfGame from '../wolfGame/wolfGame'
 import characters from '../wolfGame/characters'
+import game from '../wolfGame/game'
 
 const App = () => (
   <div>
@@ -21,6 +22,7 @@ const App = () => (
       <Route exact path="/about-us" component={About} />
       <Route exact path="/wolf-game" component={wolfGame} />
       <Route exact path="/characters" component={characters} />
+      <Route exact path="/game" component={game} />
     </main>
   </div>
 )

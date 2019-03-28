@@ -6,4 +6,5 @@
 @import './components/modal.css';
 @import './components/colourModal.css';
 @import './components/wolfGame.css';
-@import './components/character.css'
+@import './components/character.css';
+@import './components/game.css';
