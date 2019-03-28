@@ -13,6 +13,9 @@ export class Modal extends React.Component {
         } else {
             counterIds.push('Player' + (this.props.playerIds.length + 1));
         }
+        let newColours = this.props.playerColours
+        newColours.push('green')
+        this.props.updateCounterColours(newColours)
         this.props.closeAndAddModal(counterIds);
         document.getElementById('nameInput').value = '';
     }

@@ -7,7 +7,8 @@ const mapStateToProps = (state) => {
     return {
         startGame: state.wolfGame.start,
         activeCharacters: state.wolfGame.activeCharacters,
-        playerIndex: state.wolfGame.playerIndex
+        playerIndex: state.wolfGame.playerIndex,
+        players: state.wolfGame.players
     }
 }
 
