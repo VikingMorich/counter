@@ -9,7 +9,7 @@ import {
 } from '../actions/types/wolfGame'
 
 export const initialState = {
-    players: ['Morich', 'Romo', 'Carlos', 'Xavi', 'Anusky'],
+    players: [],
     characters: [
         {
             name: 'Cazador',
