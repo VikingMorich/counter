@@ -3,7 +3,9 @@ import {
     REMOVE_PLAYER,
     START_GAME,
     UPDATE_ACTIVE_CHARACTERS,
-    RESTART_VARIABLES
+    RESTART_VARIABLES,
+    SET_PLAYER_ROLS,
+    UPDATE_PLAYER_INDEX
 } from '../types/wolfGame';
 
 export const addPlayer = (playerIds) => ({
@@ -27,4 +29,14 @@ export const updateActiveCharacters = (newCharacters) => ({
 
 export const restartVariables = () => ({
     type: RESTART_VARIABLES
+})
+
+export const setPlayerRols = (playerRols) => ({
+    type: SET_PLAYER_ROLS,
+    playerRols
+})
+
+export const updatePlayerIndex = (index) => ({
+    type: UPDATE_PLAYER_INDEX,
+    index
 })

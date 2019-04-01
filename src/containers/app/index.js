@@ -6,6 +6,7 @@ import Configuration from '../configuration'
 import wolfGame from '../wolfGame/wolfGame'
 import characters from '../wolfGame/characters'
 import game from '../wolfGame/game'
+import finish from '../wolfGame/finish'
 
 const App = () => (
   <div>
@@ -23,6 +24,7 @@ const App = () => (
       <Route exact path="/wolf-game" component={wolfGame} />
       <Route exact path="/characters" component={characters} />
       <Route exact path="/game" component={game} />
+      <Route exact path="/finish" component={finish} />
     </main>
   </div>
 )

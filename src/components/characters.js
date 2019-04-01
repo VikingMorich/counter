@@ -10,8 +10,8 @@ export class characters extends React.Component {
 
     toggleCharacter (e) {
         const id = e.currentTarget.id;
-        if (id === 'Lobo' || id === 'Narrador') {
-            alert('no puedes quitar ni a lobos ni al narrador del juego')
+        if (id === 'Lobo' || id === 'Narrador' || id === 'Aldeano') {
+            alert('no puedes quitar a lobos, aldeanos, ni al narrador del juego')
         } else {
             let activeCharacters = this.props.activeCharacters
             if (e.currentTarget.className.search('pj_active') === -1) {
@@ -27,7 +27,58 @@ export class characters extends React.Component {
     }
 
     startGame () {
+        let wolves;
+        const playerNumber = this.props.players.length
+        let playersWithoutRol = this.props.players.slice()
+        let playersWithRol = {};
+        let activeCharacters = this.props.activeCharacters
+        if (playerNumber <= 10) {
+            wolves = this.props.gameRules[playerNumber]
+        } else {
+            wolves = this.props.gameRules.more
+        }
+        //llops
+        for (let i = 0; i < wolves; i++) {
+            let x = this.getRandomInt(playersWithoutRol.length)
+            playersWithRol[playersWithoutRol[x]] = 'Lobo'
+            playersWithoutRol.splice(x, 1)
+        }
+        //narrador
+        let x = this.getRandomInt(playersWithoutRol.length)
+        playersWithRol[playersWithoutRol[x]] = 'Narrador'
+        playersWithoutRol.splice(x, 1)
+        //enamorats
+        if (activeCharacters.indexOf('Enamorados') !== -1) {
+            for (let i = 0; i < 2; i++) {
+                let x = this.getRandomInt(playersWithoutRol.length)
+                playersWithRol[playersWithoutRol[x]] = 'Enamorados'
+                playersWithoutRol.splice(x, 1)
+            }
+            activeCharacters.splice(activeCharacters.indexOf('Enamorados'), 1)
+        }
+        
+        while (playersWithoutRol.length !== 0) {
+            if (activeCharacters.length !== 0) {
+                let x = this.getRandomInt(playersWithoutRol.length)
+                let y = this.getRandomInt(activeCharacters.length)
+                playersWithRol[playersWithoutRol[x]] = activeCharacters[y]
+                playersWithoutRol.splice(x, 1)
+                activeCharacters.splice(y, 1)
+            } else {
+                for (let i = 0; i < playersWithoutRol.length; i++) {
+                    playersWithRol[playersWithoutRol[i]] = 'Aldeano'
+                }
+                playersWithoutRol = []
+            }
+        }
+        this.props.setPlayerRols(playersWithRol)
         this.props.startPlaying()
+    }
+
+    getRandomInt(max) {
+        const min = 0
+        const maxx = Math.floor(max);
+        return Math.floor(Math.random() * (maxx - min)) + min;
     }
 
     render() {

@@ -18,14 +18,17 @@ export class game extends React.Component {
         }
     }
 
-    nextPlayer () {
-        console.log(this.getRandomInt(3));
-    }
 
-    getRandomInt(max) {
-        const min = 0
-        const maxx = Math.floor(max);
-        return Math.floor(Math.random() * (maxx - min)) + min;
+    nextPlayer () {
+        if (document.getElementsByClassName('flip-card')[0].className === 'flip-card') {
+            if (this.props.playerIndex !== this.props.players.length - 1) {
+                this.props.updatePlayerIndex(this.props.playerIndex + 1)
+            } else {
+                this.props.finish()
+            }
+        } else {
+            alert('Please hide your card')
+        }
     }
 
     render() {
@@ -39,6 +42,25 @@ export class game extends React.Component {
                         <div className="flip-card-front">
                         </div>
                         <div className="flip-card-back">
+                            <div className="flipped-card-content">
+                                <div className="card-information">
+                                    <span>{this.props.playerRols[this.props.players[this.props.playerIndex]]}</span>
+                                    
+                                    {this.props.playerRols[this.props.players[this.props.playerIndex]] === 'Enamorados' && <ul className='pj-list'>
+                                        {Object.keys(this.props.playerRols).map(function(key) {
+                                            if (this.playerRols[key] === 'Enamorados') {
+                                                return <li key={key}>{key}</li>
+                                            } 
+                                        }, {playerRols: this.props.playerRols})}
+                                    </ul>}
+
+                                    {this.props.playerRols[this.props.players[this.props.playerIndex]] === 'Narrador' && <ul className='pj-list'>
+                                        {Object.keys(this.props.playerRols).map(function (key) {
+                                                return <li key={key}>{key} = {this.playerRols[key]}</li>
+                                        }, { playerRols: this.props.playerRols })}
+                                    </ul>}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
