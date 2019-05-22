@@ -9,38 +9,13 @@
 
 .modalColour__box{
     width: 15em;
-    height: 14.5em;
+    height: 17.5em;
     background-color: #C5E7DA;
     margin: auto;
     margin-top: 5em;
     border-style: solid;
     border-color: #407561;
     border-width: 2px;
-}
-
-.c-red{
-    background-color: red;
-}
-.c-brown{
-    background-color: brown;
-}
-.c-green{
-    background-color: green;
-}
-.c-yellow{
-    background-color: yellow;
-}
-.c-orange{
-    background-color: orange;
-}
-.c-blue{
-    background-color: blue;
-}
-.c-purple{
-    background-color: purple;
-}
-.c-pink{
-    background-color: pink;
 }
 
 .is-selected {

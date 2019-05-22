@@ -40,30 +40,44 @@ export class ColourModal extends React.Component {
                         <tbody>
                             <tr>
                                 <th>
-                                    <div id="red" className="colourSelector c-red" onClick={this.changeSelected}></div>
+                                    <div id="red" className="colourSelector cc-red" onClick={this.changeSelected}></div>
                                 </th>
                                 <th>
-                                    <div id="brown" className="colourSelector c-brown" onClick={this.changeSelected}></div>
+                                    <div id="brown" className="colourSelector cc-brown" onClick={this.changeSelected}></div>
                                 </th>
                                 <th>
-                                    <div id="green" className="colourSelector c-green" onClick={this.changeSelected}></div>
+                                    <div id="green" className="colourSelector cc-green" onClick={this.changeSelected}></div>
                                 </th>
                                 <th>
-                                    <div id="yellow" className="colourSelector c-yellow" onClick={this.changeSelected}></div>
+                                    <div id="yellow" className="colourSelector cc-yellow" onClick={this.changeSelected}></div>
                                 </th>
                             </tr>
                             <tr>
                                 <th>
-                                    <div id="orange" className="colourSelector c-orange" onClick={this.changeSelected}></div>
+                                    <div id="orange" className="colourSelector cc-orange" onClick={this.changeSelected}></div>
                                 </th>
                                 <th>
-                                    <div id="blue" className="colourSelector c-blue" onClick={this.changeSelected}></div>
+                                    <div id="blue" className="colourSelector cc-blue" onClick={this.changeSelected}></div>
                                 </th>
                                 <th>
-                                    <div id="purple" className="colourSelector c-purple" onClick={this.changeSelected}></div>
+                                    <div id="purple" className="colourSelector cc-purple" onClick={this.changeSelected}></div>
                                 </th>
                                 <th>
-                                    <div id="pink" className="colourSelector c-pink" onClick={this.changeSelected}></div>
+                                    <div id="pink" className="colourSelector cc-pink" onClick={this.changeSelected}></div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div id="lime" className="colourSelector cc-lime" onClick={this.changeSelected}></div>
+                                </th>
+                                <th>
+                                    <div id="cyan" className="colourSelector cc-cyan" onClick={this.changeSelected}></div>
+                                </th>
+                                <th>
+                                    <div id="white" className="colourSelector cc-white" onClick={this.changeSelected}></div>
+                                </th>
+                                <th>
+                                    <div id="black" className="colourSelector cc-black" onClick={this.changeSelected}></div>
                                 </th>
                             </tr>
                         </tbody>

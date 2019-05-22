@@ -85,6 +85,7 @@ export class Home extends React.Component {
         </div>
         <hr></hr>
         {this.props.playerIds.map((id, index) => <Counter id={id} key={id} index={index} count={this.props.startingCount} />)}
+        <div className="footer" />
       </div>
     );
   }
