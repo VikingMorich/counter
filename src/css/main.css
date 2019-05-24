@@ -8,4 +8,7 @@
 @import './components/wolfGame.css';
 @import './components/character.css';
 @import './components/game.css';
-@import './components/finish.css'
+@import './components/finish.css';
+@import './components/foodConfigurator.css';
+@import './components/shoppingList.css';
+@import './components/finalShoppingList.css';

@@ -1,0 +1,49 @@
+.c-food-title{
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
+
+.c-food-day{
+    background-color: khaki;
+    width: 20em;
+    margin: auto;
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border: 8px double #55570D;
+}
+
+select{
+    text-align-last: center;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    width: 14em;
+}
+
+.c-food-buttons{
+    display: flex;
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+    justify-content: center;
+}
+
+.c-food-button{
+    background-color: #F9DE16;
+    border-radius: 5px;
+    padding: 1em;
+    margin-right: 0.2em;
+    margin-left: 0.2em;
+    border: 2px solid #714A00;
+}
+
+.c-food-meal{
+    margin-right: 0.5em;
+}
+
+.c-food-subtitle{
+    font-size: 20px;
+    text-decoration: underline;
+    margin: 0.5em 0em;
+}

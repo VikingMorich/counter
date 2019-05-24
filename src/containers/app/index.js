@@ -7,13 +7,17 @@ import wolfGame from '../wolfGame/wolfGame'
 import characters from '../wolfGame/characters'
 import game from '../wolfGame/game'
 import finish from '../wolfGame/finish'
+import foodConfig from '../foodConfigurator/foodConfig'
+import shoppingList from '../foodConfigurator/shoppingList'
+import finalShoppingList from '../foodConfigurator/finalShoppingList'
 
 const App = () => (
   <div>
     <header>
       <Link className="link-button" to="/">Home</Link>
-      <Link className="link-button" to="/configuration">Configuration</Link>
+      <Link className="link-button" to="/configuration">Config</Link>
       <Link className="link-button" to="/wolf-game">Wolf Game</Link>
+      <Link className="link-button" to="/food-configurator">Food</Link>
       <Link className="link-button" to="/about-us">About</Link>
     </header>
 
@@ -25,6 +29,9 @@ const App = () => (
       <Route exact path="/characters" component={characters} />
       <Route exact path="/game" component={game} />
       <Route exact path="/finish" component={finish} />
+      <Route exact path="/food-configurator" component={foodConfig} />
+      <Route exact path="/shopping-list" component={shoppingList} />
+      <Route exact path="/final-shopping-list" component={finalShoppingList} />
     </main>
   </div>
 )
