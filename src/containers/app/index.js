@@ -10,14 +10,18 @@ import finish from '../wolfGame/finish'
 import foodConfig from '../foodConfigurator/foodConfig'
 import shoppingList from '../foodConfigurator/shoppingList'
 import finalShoppingList from '../foodConfigurator/finalShoppingList'
+import timerConfig from '../time/timerConfig'
+import timer from '../time/timer'
+import celebrate from '../time/celebrate'
 
 const App = () => (
   <div>
     <header>
       <Link className="link-button" to="/">Home</Link>
       <Link className="link-button" to="/configuration">Config</Link>
-      <Link className="link-button" to="/wolf-game">Wolf Game</Link>
+      <Link className="link-button" to="/wolf-game">WolfGame</Link>
       <Link className="link-button" to="/food-configurator">Food</Link>
+      <Link className="link-button" to="/timer-config">Time</Link>
       <Link className="link-button" to="/about-us">About</Link>
     </header>
 
@@ -32,6 +36,9 @@ const App = () => (
       <Route exact path="/food-configurator" component={foodConfig} />
       <Route exact path="/shopping-list" component={shoppingList} />
       <Route exact path="/final-shopping-list" component={finalShoppingList} />
+      <Route exact path="/timer-config" component={timerConfig} />
+      <Route exact path="/timer" component={timer} />
+      <Route exact path="/celebrate" component={celebrate} />
     </main>
   </div>
 )
