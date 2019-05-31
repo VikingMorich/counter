@@ -13,6 +13,7 @@ import finalShoppingList from '../foodConfigurator/finalShoppingList'
 import timerConfig from '../time/timerConfig'
 import timer from '../time/timer'
 import celebrate from '../time/celebrate'
+import trippi from '../../components/trippi'
 
 const App = () => (
   <div>
@@ -39,6 +40,7 @@ const App = () => (
       <Route exact path="/timer-config" component={timerConfig} />
       <Route exact path="/timer" component={timer} />
       <Route exact path="/celebrate" component={celebrate} />
+      <Route exact path="/trippi" component={trippi} />
     </main>
   </div>
 )
