@@ -19,7 +19,7 @@ const App = () => (
   <div>
     <header>
       <Link className="link-button" to="/">Home</Link>
-      <Link className="link-button" to="/configuration">Config</Link>
+      <Link className="link-button" to="/configuration">Conf</Link>
       <Link className="link-button" to="/wolf-game">WolfGame</Link>
       <Link className="link-button" to="/food-configurator">Food</Link>
       <Link className="link-button" to="/timer-config">Time</Link>
